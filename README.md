@@ -10,4 +10,4 @@ Designing the database has been divided into three stages, which will be impleme
 We live in times when machine learning algorithms can be successfully implemented in many areas of science and technology. Electron-molecule interaction studies are no exception. I hope that by building this database it will be possible to collect data that can be used in some neural networks or decision trees and support the analysis of scattering processes. 
 
 ## 2. Database schema 
-The main table will contain chemical compound names and foreign keys to tables containing detailed data. 
+The main table will contain chemical compounds names and foreign keys to tables containing detailed data. 
