@@ -10,4 +10,17 @@ Designing the database has been divided into three stages, which will be impleme
 We live in times when machine learning algorithms can be successfully implemented in many fields of science and technology. Electron-molecule interaction studies are no exception. I hope that by building this database it will be possible to collect data that can be used in some neural networks or decision trees and support the analysis of scattering processes. 
 
 ## 2. Database schema 
-The main table will contain chemical compounds names and foreign keys to tables containing detailed data. 
+The main table will contain the name of the studied molecule and foreign keys to subsequent tables with more detailed data. The remaining tables will contain data about:
+- the most important properties of the molecule
+- test results
+- sources from which particular data comes (articles, books, etc.)
+The sources table will be linked to all the others and will provide information about where the data comes from. As the sources may be different, the table will store data in a universal way (an article is cited in a different way than a book is cited).
+
+### List of Tables:
+- study - a table storing data about specific studies
+- mol_data - table storing information about molecules '
+- results - a table storing the results of experimental or theoretical research
+- sources - table storing information about data sources
+
+### Normalization 
+The database is planned to meet the conditions for normalization to at least the first two normal forms. 
