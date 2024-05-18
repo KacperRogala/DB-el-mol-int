@@ -24,3 +24,21 @@ The sources table will be linked to all the others and will provide information 
 
 ### Normalization 
 The database is planned to meet the conditions for normalization to at least the first two normal forms. 
+- first normal form - grouping related columns into separate tables, reducing redundancy, creating keys connecting databases 
+- second normal form - there are no partial dependencies of primary keys and columns
+
+### Database columns/features 
+A graphical representation of the database can be found in the file "databese_schema.jpg" in this repository. As mentioned above, the database consists of four tables. The columns store the following data: 
+
+#### study table:
+- id - primary key
+- mol_name - name of the molecule being tested
+- mol_data_id - foreign key to the mol_data table storing detailed data about molecules
+- source_id - foreign key to the sources table, which contains information about the source where one can find details of a specific study
+
+#### results table:
+- id - primary key
+- energy - energy value for which a specific value of the scattering cross section was measured
+- cross_section - value of the measured scattering cross section
+- uncertainty - the value of uncertainty related to a specific value of the scattering cross section
+- study_id - foreign key to the study table 
