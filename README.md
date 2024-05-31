@@ -28,13 +28,13 @@ The database is planned to meet the conditions for normalization to at least the
 - second normal form - there are no partial dependencies of primary keys and columns
 
 ### Database columns/features 
-A graphical representation of the database can be found in the file "databese_schema.jpg" in this repository. As mentioned above, the database consists of four tables. The columns store the following data: 
+As mentioned above, the database consists of four tables. The columns store the following data: 
 
 #### study table:
 - id - primary key
 - mol_name - name of the molecule being tested
 - mol_data_id - foreign key to the mol_data table storing detailed data about molecules
-- source_id - foreign key to the sources table, which contains information about the source where one can find details of a specific study (related to the TCS values in this case) 
+- source_id - foreign key to the sources table, which contains information about the source where one can find details of a specific study (related to the cross section values in this case) 
 
 #### results table:
 - id - primary key
@@ -64,8 +64,10 @@ A graphical representation of the database can be found in the file "databese_sc
 - month_of_visit - month of source url visit
 - year_of_visit - year of source url visit
 - id_nr - doi, ISBN, or other identifying number, if any
-- .... 
+- name - title of the article, book, name of the website, etc.
+- authors - people responsible for the data contained in the source
+- cite - source citation  
 
- ### Graphical representation of the database schema 
- An illustration of the database schema is in the file "db_schema.jpeg". The picture was made using the dbdiagram.io editor (https://dbdiagram.io/home/ - access on 05/24). 
+### Graphical representation of the database schema 
+An illustration of the database schema is in the file "db_schema.jpeg". The picture was made using the dbdiagram.io editor (https://dbdiagram.io/home/ - access on 05/24). 
 
