@@ -57,5 +57,15 @@ A graphical representation of the database can be found in the file "databese_sc
 - numb_atoms - the number of atomic nuclei that a molecule contains
 - numb_electrons - the number of electrons that a molecule contains
 
+#### sources table: 
+- id - primary key
+- type - type of the source - A is for scientific article, B is for book, W is for website, D is for database, O is for other
+- url - url address where one can find the source
+- month_of_visit - month of source url visit
+- year_of_visit - year of source url visit
+- id_nr - doi, ISBN, or other identifying number, if any
+- .... 
+
  ### Graphical representation of the database schema 
- An illustration of the database schema is in the file "db_schema.jpeg". 
+ An illustration of the database schema is in the file "db_schema.jpeg". The picture was made using the dbdiagram.io editor (https://dbdiagram.io/home/ - access on 05/24). 
+
