@@ -16,7 +16,7 @@ The main table will contain the name of the studied molecule and foreign keys to
 - sources from which particular data comes (articles, books, etc.)
 The sources table will be linked to all the others and will provide information about where the data comes from. As the sources may be different, the table will store data in a universal way (an article is cited in a different way than a book is cited).
 
-### List of Tables:
+### List of Tables 
 - study - a table storing data about specific studies
 - mol_data - table storing information about molecules '
 - results - a table storing the results of experimental or theoretical research
@@ -34,11 +34,28 @@ A graphical representation of the database can be found in the file "databese_sc
 - id - primary key
 - mol_name - name of the molecule being tested
 - mol_data_id - foreign key to the mol_data table storing detailed data about molecules
-- source_id - foreign key to the sources table, which contains information about the source where one can find details of a specific study
+- source_id - foreign key to the sources table, which contains information about the source where one can find details of a specific study (related to the TCS values in this case) 
 
 #### results table:
 - id - primary key
 - energy - energy value for which a specific value of the scattering cross section was measured
 - cross_section - value of the measured scattering cross section
 - uncertainty - the value of uncertainty related to a specific value of the scattering cross section
-- study_id - foreign key to the study table 
+- study_id - foreign key to the study table
+
+#### mol_data table:
+- id - primary key
+- mol_name - name of the molecule being tested 
+- chem_form - formula of the molecule
+- iupac_name - official IUPAC name of the molecule
+- polarizability - polarizability value of the molecule
+- polar_id - foreign key to the sources table, which contains information about the source where one can find details of a specific study (related to the polarizability values in this case)
+- dipol - dipole moment value of the molecule
+- dipol_id - foreign key to the sources table, which contains information about the source where one can find details of a specific study (related to the dipol moment values in this case)
+- ionization - ionization threshold value of the molecule
+- ion_id - foreign key to the sources table, which contains information about the source where one can find details of a specific study (related to the ionization threshold values in this case)
+- numb_atoms - the number of atomic nuclei that a molecule contains
+- numb_electrons - the number of electrons that a molecule contains
+
+ ### Graphical representation of the database schema 
+ An illustration of the database schema is in the file "db_schema.jpeg". 
