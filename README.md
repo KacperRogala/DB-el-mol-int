@@ -1,4 +1,4 @@
-# Database-for-electron-molecule-interaction-studies
+# Database for electron-molecule interaction studies
 ## 1. Introduction 
 The aim of the project is to design a simple relational database, which will primarily store data regarding the results of the absolute *grand*-total cross section (TCS) measurements for electron scattering on molecules. It is very possible and highly desirable to expand the database with other types of data, e.g. cross sections for individual scattering processes or results that are not converted into cross sections. 
 
